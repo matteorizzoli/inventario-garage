@@ -1,6 +1,6 @@
 # Inventario Garage — Specifica di progetto
 
-Versione 0.1 — 6 ottobre 2026
+Versione 0.2 — 6 ottobre 2026
 Documento di riferimento per lo sviluppo (da tenere nella radice del repository).
 
 ## 1. Obiettivo
@@ -60,7 +60,7 @@ Ogni scheda del Google Sheet corrisponde a una tabella. Colonne comuni a tutte: 
 
 ### 4.1 Ubicazioni
 
-Struttura gerarchica a quattro livelli: luogo → mobile → posizione → contenitore. I livelli intermedi si possono saltare.
+Struttura gerarchica a quattro livelli: luogo → mobile → posizione → contenitore. I livelli intermedi si possono saltare: un mobile sta in un luogo; una posizione sta in un mobile oppure direttamente in un luogo; un contenitore sta in un luogo, in un mobile o in una posizione.
 
 | Campo | Note |
 |---|---|
@@ -74,7 +74,7 @@ Struttura gerarchica a quattro livelli: luogo → mobile → posizione → conte
 
 - **Luogo** (sigla di tre caratteri): `GAR` garage, `CAN` cantina, `BAL` balcone, `PI1` primo piano, `PI2` secondo piano, `MAM` casa della mamma, `CN2` cantina del nuovo appartamento. Elenco modificabile dall'app. `GAR` è il luogo predefinito.
 - **Mobile** (fisso): lettera del tipo + progressivo, numerati in senso orario dall'ingresso. `A` armadi/armadietti, `S` scaffali/librerie, `P` pareti attrezzate e supporti metallici, `B` banco, `Z` zone a terra o senza mobile. Es. `GAR-A1`.
-- **Posizione** (fissa): `R` ripiano dal basso verso l'alto, `C` cassetto dall'alto verso il basso, settori di parete da sinistra a destra. Es. `GAR-A1-R3`.
+- **Posizione** (fissa): lettera del tipo + progressivo, aggiunti al codice del livello superiore. `R` ripiano dal basso verso l'alto, `C` cassetto dall'alto verso il basso, `S` settore di parete da sinistra a destra. Es. `GAR-A1-R3`, `GAR-P1-S2`; direttamente in un luogo, es. `GAR-R1`.
 - **Contenitore** (mobile): progressivo globale indipendente dalla posizione, `K001`, `K002`... La posizione attuale è data da `id_padre`; spostare un contenitore (anche tra luoghi diversi) non richiede di ristampare l'etichetta.
 
 Fuori dal garage è ammesso un dettaglio ridotto: articolo collegato direttamente al luogo, o a un mobile descritto a parole, senza etichette.

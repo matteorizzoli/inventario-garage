@@ -4,7 +4,7 @@
 // dispositivi continuano a usare i file in cache. Se si aggiunge un file,
 // inserirlo in FILE_APP (verifica: `node strumenti/verifica-sw.mjs`).
 
-const VERSIONE = '0.1.0';
+const VERSIONE = '0.1.1';
 const PREFISSO = 'inventario-garage-';
 const CACHE = `${PREFISSO}${VERSIONE}`;
 

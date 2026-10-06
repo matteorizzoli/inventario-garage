@@ -20,8 +20,8 @@ Specifica completa: [`SPEC.md`](SPEC.md).
 
 - **Luogo**: sigla di 3 caratteri `[A-Z0-9]`. Al primo avvio vengono creati GAR, CAN, BAL, PI1, PI2, MAM, CN2; l'elenco si modifica dall'app.
 - **Mobile**: `<luogo>-<lettera><n>`, lettere A, S, P, B, Z. Es. `GAR-A1`.
-- **Posizione**: `<padre>-<lettera><n>`, lettere R (ripiano), C (cassetto), **S (settore di parete)**.
-  La SPEC non fissa la lettera dei settori: ho scelto `S`, da confermare. Il padre è di norma un mobile; è ammesso anche un luogo (livello intermedio saltato).
+- **Posizione**: `<padre>-<lettera><n>`, lettere R (ripiano), C (cassetto), S (settore di parete).
+  Il padre è un mobile (`GAR-A1-R3`) oppure direttamente un luogo (`GAR-R1`).
 - **Contenitore**: `K001`, `K002`… progressivo globale. Sta in un luogo, mobile o posizione e si sposta con "Sposta" senza cambiare codice.
 
 L'app propone il primo numero libero e rifiuta codici fuori formato o già usati. I numeri dei

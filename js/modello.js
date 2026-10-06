@@ -33,7 +33,6 @@ export const LETTERE_MOBILE = {
   Z: 'Zona a terra / senza mobile',
 };
 
-// La SPEC indica R e C; per i settori di parete non fissa la lettera: si usa S.
 export const LETTERE_POSIZIONE = {
   R: 'Ripiano (dal basso verso l’alto)',
   C: 'Cassetto (dall’alto verso il basso)',
