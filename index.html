@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Inventario personale del garage: dove si trova il materiale, quanto ce n'è, con foto.">
+  <meta name="theme-color" content="#1f6f5c">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Garage">
+  <meta name="format-detection" content="telephone=no">
+  <title>Inventario Garage</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icone/icona-192.png">
+  <link rel="apple-touch-icon" href="icone/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="barra-alta">
+    <h1 id="titolo">Inventario Garage</h1>
+    <span id="indicatore" class="indicatore" role="status"></span>
+  </header>
+
+  <main id="vista">
+    <div class="vuoto grande"><p>Caricamento…</p></div>
+  </main>
+
+  <nav class="barra-schede" aria-label="Sezioni">
+    <a href="#/cerca" data-scheda="cerca">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span>Cerca</span>
+    </a>
+    <a href="#/aggiungi" data-scheda="aggiungi" class="principale">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      <span>Aggiungi</span>
+    </a>
+    <a href="#/ubicazioni" data-scheda="ubicazioni">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01"/></svg>
+      <span>Ubicazioni</span>
+    </a>
+    <a href="#/impostazioni" data-scheda="impostazioni">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      <span>Impostazioni</span>
+    </a>
+  </nav>
+
+  <div id="avvisi" aria-live="polite"></div>
+
+  <noscript><p class="vuoto grande">Questa app richiede JavaScript.</p></noscript>
+</body>
+</html>
