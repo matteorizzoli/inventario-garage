@@ -1,0 +1,18 @@
+{
+  "name": "Inventario Garage",
+  "short_name": "Garage",
+  "description": "Dove si trova il materiale del garage, quanto ce n'è, con foto.",
+  "lang": "it",
+  "start_url": "./#/cerca",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f5f2",
+  "theme_color": "#1f6f5c",
+  "icons": [
+    { "src": "icone/icona-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icone/icona-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icone/icona-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
